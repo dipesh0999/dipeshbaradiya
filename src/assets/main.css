@@ -1,0 +1,53 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-primary: #313131;
+  --color-white: #fff;
+  --color-black10: rgba(0, 0, 0, 0.1);
+  --color-black20: rgba(0, 0, 0, 0.2);
+  --color-black50: rgba(0, 0, 0, 0.5);
+  --color-orange: #fc4909;
+  --color-blue: #2096f3;
+  --color-skyBlue: #39bdf8;
+  --color-pink: #c96597;
+  --color-lightOrange: #e6a946;
+  --color-midBlue: #0568ab;
+  --color-lightGreen: #40b37f;
+  --color-fire: #ee4e28;
+  --color-darkBlue: #001834;
+  --color-purple: #b157f9;
+  --font-title: 'Zalando Sans Expanded', sans-serif;
+  --font-subtitle: 'Bebas Neue', sans-serif;
+  --font-code: 'Fira Code', monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.border-head::before,
+.border-head::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: -5%;
+  top: 50%;
+  transform: translateY(-50%);
+  background: url('@/assets/images/icons/left-chevron.svg') no-repeat;
+  background-size: 100%;
+  border-radius: 50%;
+}
+
+.border-head::after {
+  left: auto;
+  right: -5%;
+  transform: translateY(-50%) rotate(180deg);
+}
+
+@media screen and (max-width: 540px) {
+}
