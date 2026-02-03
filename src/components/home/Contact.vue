@@ -14,8 +14,9 @@
                         Let’s make somthing new, different and more meaningful or make thing more visual or conceptual? Just
                         say hello!
                     </p>
-                    <a href=""
-                        class="md:px-4 md:py-2 border border-primary text-white bg-primary rounded-sm hover:bg-white hover:text-primary duration-300 ease-in">Contact
+                    <a href="mailto:dipeshbr25@gmail.com"
+                        class="md:px-4 md:py-2 border border-primary text-white bg-primary rounded-sm hover:bg-white hover:text-primary duration-300 ease-in"
+                        target="_blank">Contact
                         Me</a>
                 </div>
             </div>
