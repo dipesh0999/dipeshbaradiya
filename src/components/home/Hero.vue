@@ -1,15 +1,15 @@
 <template>
-  <section class="md:pt-30 md:px-20 lg:px-30 md:pb-25 h-[100vh] overflow-hidden">
-    <div class="flex gap-20 items-start">
+  <section class="pt-20 px-8 md:pt-30 md:px-20 lg:px-30 md:pb-25 h-[100vh] overflow-hidden">
+    <div class="flex flex-col md:flex-row gap-10 md:gap-20 items-end md:items-start">
       <div class="md:w-120 lg:w-200 text-primary mt-5">
         <div
-          class="relative pl-10 md:text-[32px] leading-[1.2] before:absolute before:w-7 before:h-[2px] before:bg-primary before:left-0 before:top-1/2 before:-translate-y-1/2">
+          class="relative pl-8 md:pl-10 text-[26px] md:text-[32px] leading-[1.2] before:absolute before:w-6 md:before:w-7 before:h-[2px] before:bg-primary before:left-0 before:top-1/2 before:-translate-y-1/2">
           Hello
         </div>
-        <h1 class="md:text-[34px] lg:text-[40px] leading-[1.2] mt-2 mb-4">
+        <h1 class="text-[28px] md:text-[34px] lg:text-[40px] leading-[1.2] mt-4 mb-3 md:mt-2 md:mb-4">
           I'm <span class="font-title font-semibold mdtext-[38px] lg:text-[46px] text-black">Dipesh Baradiya</span>
         </h1>
-        <p class="text-[18px]">
+        <p class="text-[14px] md:text-[14px] lg:text-[18px]">
           As a dedicated Frontend Developer with 3 years of experience, I specialize in developing
           responsive, user-friendly interfaces for web development. Leveraging expertise in HTML,
           CSS, SCSS, jQuery, JavaScript and Vue Js. I transform innovative design concepts into
@@ -20,14 +20,14 @@
         </p>
         <p class=""></p>
       </div>
-      <div class="md:w-100 relative pt-5">
+      <div class="w-75 md:w-100 relative pt-5">
         <img src="@/assets/images/profile.png" alt=""
           class="w-[80%] relative z-1 filter drop-shadow-[0px_10px_15px_#000000]" />
-        <img src="@/assets/images/geomatric.svg" alt="" class="md:w-50 lg:w-70 absolute right-3 top-0" />
+        <img src="@/assets/images/geomatric.svg" alt="" class="w-45 md:w-50 lg:w-70 absolute right-3 top-0" />
       </div>
     </div>
-    <div class="text-center mt-10">
-      <div class="md:w-6 lg:w-10 mx-auto mb-2">
+    <div class="hidden md:block text-center mt-10">
+      <div class="w-4 md:w-6 lg:w-10 mx-auto mb-2">
         <svg width="100%" height="100%" viewBox="0 0 247 390" version="1.1" xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink" style="
             fill-rule: evenodd;

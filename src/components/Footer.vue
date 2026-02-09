@@ -1,8 +1,8 @@
 <template>
-    <footer class="bg-black flex justify-center items-center md:gap-10 md:py-5 md:px-20 lg:px-30">
+    <footer class="bg-black flex justify-center items-center gap-5 md:gap-10 py-5 pb-10 px-8 md:py-5 md:px-20 lg:px-30">
         <div class="text-white" v-for="(item, index) in social" :key="index">
             <a :href="item.url" class="" target="_blank">
-                <img :src="item.image" alt="" class="w-8 invert-50 hover:invert-100 duration-300 ease-in" />
+                <img :src="item.image" alt="" class="w-9 md:w-8 invert-50 hover:invert-100 duration-300 ease-in" />
             </a>
         </div>
     </footer>
