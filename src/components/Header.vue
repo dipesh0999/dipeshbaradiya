@@ -1,11 +1,11 @@
 <template>
-  <header class="py-5 px-5 md:py-5 md:px-20 lg:px-30 flex justify-between items-center fixed w-full bg-white z-9 shadow-[0px_8px_5px_rgba(0,0,0,0.04)]
+  <header class="py-5 px-5 md:py-5 md:px-20 lg:px-30 flex justify-between items-center fixed z-99 w-full bg-white z-9 shadow-[0px_8px_5px_rgba(0,0,0,0.04)]
 ">
     <img src="../assets/images/logo.svg" class="w-30 md:w-40" />
     <div
-      class="fixed bg-black/50 md:bg-transparent md:relative w-full h-screen md:h-auto md:w-auto pt-5 top-18 sm:top-15 md:top-auto md:left-auto transition-all duration-300 ease-in-out"
+      class="fixed md:relative w-full h-screen md:h-auto md:w-auto delay-250 z-9 pt-5 top-18 sm:top-15 md:top-auto md:left-auto transition-all duration-300 ease-in-out"
       :class="isMenuOpen ? 'left-0' : '-left-full'">
-      <div class=" bg-white md:bg-transparent flex flex-col md:flex-row items-center gap-10 py-15 md:p-0">
+      <div class=" bg-white md:bg-transparent relative flex flex-col md:flex-row items-center gap-10 py-15 md:p-0">
         <a href="/" @click="closeMenu"
           class="text-primary hover:text-black text-nav duration-300 ease-in text-[24px] md:text-[18px] font-medium">Home</a>
         <a href="#skills" @click="closeMenu"
@@ -34,6 +34,10 @@
           </div>
         </a>
       </div>
+    </div>
+    <div
+      class="bg-black/50 md:bg-transparent inset-0 transition-all md:hidden duration-300 ease-in-out fixed top-18 sm:top-15 md:top-auto left-0"
+      :class="isMenuOpen ? 'opacity-100' : 'opacity-0 delay-400'">
     </div>
     <div class="md:hidden inline-flex">
       <button type="button" class="hamburger" :class="{ active: isMenuOpen }" @click="toggleMenu">
