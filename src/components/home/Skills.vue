@@ -1,6 +1,6 @@
 <template>
   <section
-    class="py-15 px-8 md:py-25 md:px-20 lg:px-30 lg:pb-25 md:pb-15 bg-[url(@/assets/images/skills-bg.png)] bg-no-repeat bg-cover"
+    class="py-15 px-8 sm:py-18 md:py-25 md:px-20 lg:px-30 lg:pb-25 md:pb-15 bg-[url(@/assets/images/skills-bg.png)] bg-no-repeat bg-cover"
     id="skills">
     <div class="text-center">
       <h2 class="relative inline-block text-[36px] font-subtitle tracking-[2px] font-semibold black">Skills
@@ -25,7 +25,7 @@
         </div>
       </div>
 
-      <div class="flex justify-evenly md:justify-center items-center flex-wrap gap-6 mt-10 lg:mx-25">
+      <div class="flex justify-evenly sm:justify-center items-center flex-wrap gap-6 mt-10 lg:mx-25">
         <div v-for="(item, index) in skills" :key="index" class="mb-10 md:mb-8 relative text-center w-30 md:w-40 group">
           <div :class="[
             item.class,

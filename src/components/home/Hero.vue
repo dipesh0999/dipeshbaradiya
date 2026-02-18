@@ -20,7 +20,7 @@
         </p>
         <p class=""></p>
       </div>
-      <div class="w-75 md:w-100 relative pt-5">
+      <div class="w-75 sm:w-65 md:w-100 relative pt-5">
         <img src="@/assets/images/profile.png" alt=""
           class="w-[80%] relative z-1 filter drop-shadow-[0px_10px_15px_#000000]" />
         <img src="@/assets/images/geomatric.svg" alt="" class="w-45 md:w-50 lg:w-70 absolute right-3 top-0" />

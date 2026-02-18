@@ -1,5 +1,5 @@
 <template>
-    <section class="md:pt-25 pt-15 bg-black10" id="contact">
+    <section class="md:pt-25 sm:pt-18 pt-15 bg-black10" id="contact">
         <div class="text-center md:px-20 lg:px-30">
             <h2 class="relative inline-block text-[36px] font-subtitle tracking-[2px] font-semibold black">Contact
                 <span class="w-[160%] border-2 border-black absolute left-1/2 bottom-0 -translate-x-1/2 border-head"></span>

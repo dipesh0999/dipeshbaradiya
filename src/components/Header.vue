@@ -2,19 +2,17 @@
   <header class="py-5 px-5 md:py-5 md:px-20 lg:px-30 flex justify-between items-center fixed w-full bg-white z-9 shadow-[0px_8px_5px_rgba(0,0,0,0.04)]
 ">
     <img src="../assets/images/logo.svg" class="w-30 md:w-40" />
-    <div class="fixed bg-black/50 menuList md:bg-transparent md:relative w-full h-screen md:h-auto md:w-auto md:relative pt-5 md:pt top-18 md:top-auto md:left-auto -left-[100%] 
-         " :class="[
-           'menu',
-           { active: isMenuOpen }
-         ]">
+    <div
+      class="fixed bg-black/50 md:bg-transparent md:relative w-full h-screen md:h-auto md:w-auto pt-5 top-18 sm:top-15 md:top-auto md:left-auto transition-all duration-300 ease-in-out"
+      :class="isMenuOpen ? 'left-0' : '-left-full'">
       <div class=" bg-white md:bg-transparent flex flex-col md:flex-row items-center gap-10 py-15 md:p-0">
-        <a href="/"
+        <a href="/" @click="closeMenu"
           class="text-primary hover:text-black text-nav duration-300 ease-in text-[24px] md:text-[18px] font-medium">Home</a>
-        <a href="#skills"
+        <a href="#skills" @click="closeMenu"
           class="text-primary hover:text-black text-nav duration-300 ease-in text-[24px] md:text-[18px] font-medium">Skills</a>
-        <a href="#projects"
+        <a href="#projects" @click="closeMenu"
           class="text-primary hover:text-black text-nav duration-300 ease-in text-[24px] md:text-[18px] font-medium">Projects</a>
-        <a href="#contact" class="text-[22px] md:text-[16px] font-medium rounded-full ml-[10px]">
+        <a href="#contact" @click="closeMenu" class="text-[22px] md:text-[16px] font-medium rounded-full ml-[10px]">
           <div
             class="relative flex items-center px-6 py-2 overflow-hidden font-medium transition-all bg-black50 rounded-md group">
             <span
@@ -38,11 +36,11 @@
       </div>
     </div>
     <div class="md:hidden inline-flex">
-      <a href="#" class="hamburger" :class="{ active: isMenuOpen }" @click="toggleMenu">
+      <button type="button" class="hamburger" :class="{ active: isMenuOpen }" @click="toggleMenu">
         <span class="hamburger_line"></span>
         <span class="hamburger_line"></span>
         <span class="hamburger_line"></span>
-      </a>
+      </button>
     </div>
   </header>
 </template>
@@ -58,6 +56,9 @@ export default {
   methods: {
     toggleMenu() {
       this.isMenuOpen = !this.isMenuOpen
+    },
+    closeMenu() {
+      this.isMenuOpen = false
     }
   }
 }
