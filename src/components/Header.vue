@@ -36,8 +36,8 @@
       </div>
     </div>
     <div
-      class="bg-black/50 md:bg-transparent inset-0 transition-all md:hidden duration-300 ease-in-out fixed top-18 sm:top-15 md:top-auto left-0"
-      :class="isMenuOpen ? 'opacity-100' : 'opacity-0 delay-400'">
+      class="bg-black/50 md:bg-transparent w-full h-screen transition-all md:hidden duration-300 ease-in-out fixed top-18 sm:top-15 md:top-auto"
+      :class="isMenuOpen ? 'left-0' : 'delay-400 -left-full'">
     </div>
     <div class="md:hidden inline-flex">
       <button type="button" class="hamburger" :class="{ active: isMenuOpen }" @click="toggleMenu">
