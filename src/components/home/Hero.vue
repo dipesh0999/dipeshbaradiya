@@ -6,8 +6,8 @@
           class="relative pl-8 md:pl-10 text-[26px] md:text-[32px] leading-[1.2] before:absolute before:w-6 md:before:w-7 before:h-[2px] before:bg-primary before:left-0 before:top-1/2 before:-translate-y-1/2">
           Hello
         </div>
-        <h1 class="text-[26px] md:text-[34px] lg:text-[40px] leading-[1.2] mt-4 mb-3 md:mt-2 md:mb-4">
-          I'm <span class="font-title font-semibold text-[30px] md:text-[38px] lg:text-[46px] text-black">Dipesh
+        <h1 class="text-[24px] md:text-[34px] lg:text-[40px] leading-[1.2] mt-4 mb-3 md:mt-2 md:mb-4">
+          I'm <span class="font-title font-semibold text-[28px] md:text-[38px] lg:text-[46px] text-black">Dipesh
             Baradiya</span>
         </h1>
         <p class="text-[12px] md:text-[14px] lg:text-[18px]">
