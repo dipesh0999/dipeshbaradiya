@@ -73,7 +73,16 @@ h2 {
   overflow-wrap: break-word;
 }
 
-h3 { font-size: 18px; margin: 18px 0 8px; }
+.tools_container {
+  margin-top: 50px;
+}
+.tools_container h3 { 
+  font-size: 18px; 
+  margin: 18px 0 20px; 
+  font-weight: 100;
+  letter-spacing: 2px;
+  font-family: "Inter", Arial, sans-serif;
+}
 
 p {
   font-size: var(--paragraph-size);
@@ -470,7 +479,9 @@ a:focus-visible, button:focus-visible {
   .menu > .button { padding: 12px 20px; }
   .short-grid { grid-template-columns: repeat(2, 1fr); }
   .two-columns { gap: 32px; }
-  .tools { grid-template-columns: 1fr; }
+  .tools {
+    grid-template-columns: repeat(2, 1fr)
+  }
 }
 
 @media (max-width: 945px) {
@@ -512,6 +523,7 @@ a:focus-visible, button:focus-visible {
   .long-grid { grid-template-columns: 1fr; }
   .short-grid { gap: 16px; }
   .video-card h3 { font-size: 16px; }
+  .tools_container h3 { font-size: 16px; }
   /* .footer { flex-direction: column; } */
   h1 { letter-spacing: -1px; }
 }
