@@ -161,7 +161,11 @@ p {
 .footer .back{
   display: flex;
   align-items: flex-start;
-  gap: 5px;
+  justify-content: flex-end;
+  width: 50%;
+}
+.footer .back a span{
+  padding-left: 2px;
 }
 
 .menu > a:not(.button)::before,
@@ -494,7 +498,7 @@ a:focus-visible, button:focus-visible {
 }
 
 @media (max-width: 945px) {
-  .hero, .two-columns { grid-template-columns: 1fr; gap: 24px; }
+  .hero, .two-columns { grid-template-columns: 1fr; gap: 0px; }
 }
 
 /* MOBILE */
