@@ -111,6 +111,7 @@ p {
 
 /* FIXED NAVIGATION */
 .header {
+  width: 100%;
   position: fixed;
   inset: 0 0 auto;
   z-index: 100;
@@ -496,6 +497,10 @@ a:focus-visible, button:focus-visible {
     --label-size: 10px;
     --navigation-size: 17px;
     --logo-height: 48px;
+  }
+
+  .tools .icons{
+    flex-direction: column;
   }
 
   .buttons {
