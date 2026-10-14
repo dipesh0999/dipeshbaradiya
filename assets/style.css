@@ -425,13 +425,13 @@ a:focus-visible, button:focus-visible {
   .menu {
     position: absolute;
     top: 100%;
-    left: -5.56%;
-    right: -5.56%;
+    left: 0;
+    right: 0;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 16px;
-    padding: 24px 5%;
+    padding: 24px 12%;
     max-height: 70vh;
     overflow-y: auto;
     background: var(--navigation);
