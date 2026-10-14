@@ -251,7 +251,7 @@
 
   <footer class="container footer">
     <span>© <span id="year"></span> Dipesh Baradiya · Video editor</span>
-    <a href="#home">BACK TO TOP ↑</a>
+    <a href="#home" class="back">BACK TO TOP ↑</a>
   </footer>
 
   <!-- Full-size image popup -->
@@ -373,51 +373,73 @@
     document.querySelector("#year").textContent = new Date().getFullYear();
 
     document.querySelectorAll(".video-trigger").forEach(button => {
-        const id = (button.dataset.videoId || "").trim();
-        const image = button.querySelector("img");
+      const id = (button.dataset.videoId || "").trim();
+      const image = button.querySelector("img");
+    
+      if (!/^[a-zA-Z0-9_-]{11}$/.test(id)) {
+        console.error("Invalid YouTube video ID:", id);
+        return;
+      }
+    
+      // Fetch YouTube thumbnail.
+      if (image) {
+        let fallbackUsed = false;
+    
+        const fallback = () => {
+          if (fallbackUsed) return;
+          fallbackUsed = true;
+          image.src = `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
+        };
+    
+        image.onerror = fallback;
+        image.onload = () => {
+          if (image.naturalWidth < 300) fallback();
+        };
+    
+        image.src = `https://i.ytimg.com/vi/${id}/maxresdefault.jpg`;
+      }
+    
+      // Play video inside the same box.
+      button.addEventListener("click", () => {
+        const player = document.createElement("div");
+        player.className = "thumbnail";
+    
+        const iframe = document.createElement("iframe");
+        iframe.src =
+          `https://www.youtube.com/embed/${id}?autoplay=1&rel=0`;
+        iframe.title = "YouTube video";
+        iframe.allow =
+          "autoplay; encrypted-media; picture-in-picture; fullscreen";
+        iframe.allowFullscreen = true;
+        iframe.referrerPolicy = "strict-origin-when-cross-origin";
+    
+        player.appendChild(iframe);
+        button.replaceWith(player);
+      });
+    });
+    
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener("click", event => {
+      event.preventDefault();
       
-        if (!/^[a-zA-Z0-9_-]{11}$/.test(id)) {
-          console.error("Invalid YouTube video ID:", id);
-          return;
-        }
+      const id = link.getAttribute("href").slice(1);
+      const section = document.getElementById(id);
+      if (!section) return;
       
-        // Fetch YouTube thumbnail.
-        if (image) {
-          let fallbackUsed = false;
+      const header = document.querySelector(".header");
+      const offset = header ? header.offsetHeight : 0;
       
-          const fallback = () => {
-            if (fallbackUsed) return;
-            fallbackUsed = true;
-            image.src = `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
-          };
-      
-          image.onerror = fallback;
-          image.onload = () => {
-            if (image.naturalWidth < 300) fallback();
-          };
-      
-          image.src = `https://i.ytimg.com/vi/${id}/maxresdefault.jpg`;
-        }
-      
-        // Play video inside the same box.
-        button.addEventListener("click", () => {
-          const player = document.createElement("div");
-          player.className = "thumbnail";
-      
-          const iframe = document.createElement("iframe");
-          iframe.src =
-            `https://www.youtube.com/embed/${id}?autoplay=1&rel=0`;
-          iframe.title = "YouTube video";
-          iframe.allow =
-            "autoplay; encrypted-media; picture-in-picture; fullscreen";
-          iframe.allowFullscreen = true;
-          iframe.referrerPolicy = "strict-origin-when-cross-origin";
-      
-          player.appendChild(iframe);
-          button.replaceWith(player);
-        });
+      window.scrollTo({
+        top: section.getBoundingClientRect().top + window.scrollY - offset - 16,
+        behavior: "smooth"
+      });
+      });
       });
       
+      // Remove an existing hash from the address bar.
+      if (window.location.hash) {
+      history.replaceState(null, "", window.location.pathname + window.location.search);
+      }
   </script>
 </body>
 </html>

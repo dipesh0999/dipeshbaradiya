@@ -140,6 +140,12 @@ p {
     position: relative;
 }
 
+.footer .back{
+  display: flex;
+  align-items: flex-start;
+  gap: 5px;
+}
+
 .menu > a:not(.button)::before,
 .footer > a::before {
     content: "";
