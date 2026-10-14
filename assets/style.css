@@ -517,3 +517,71 @@ a:focus-visible, button:focus-visible {
   *, *::before, *::after { transition: none !important; }
   .thumbnail:hover img { transform: none; }
 }
+
+
+/* MOTION & GRAPHICS */
+#motion {
+  --padding: 70px 0 70px 0;
+}
+
+.motion-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.motion-card {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  padding: 0;
+  overflow: hidden;
+  background: #151516;
+  border: 1px solid var(--border);
+}
+
+.motion-card video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.motion-card small {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  z-index: 1;
+  max-width: calc(100% - 32px);
+  padding: 6px 8px;
+  background: rgba(0, 0, 0, 0.65);
+  color: var(--text);
+  font-family: monospace;
+  font-size: 9px;
+  line-height: 1.5;
+  pointer-events: none;
+}
+
+/* TABLET */
+@media (max-width: 1024px) {
+  #motion {
+    --padding: 55px 0 55px 0;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  #motion {
+    --padding: 40px 0 40px 0;
+  }
+
+  .motion-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .motion-card small {
+    bottom: 12px;
+    left: 12px;
+    max-width: calc(100% - 24px);
+  }
+}
