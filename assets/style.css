@@ -499,6 +499,7 @@ a:focus-visible, button:focus-visible {
 
 @media (max-width: 945px) {
   .hero, .two-columns { grid-template-columns: 1fr; gap: 0px; }
+  .hero { gap: 40px; }
 }
 
 /* MOBILE */
