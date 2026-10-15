@@ -12,6 +12,26 @@
   <link rel="manifest" href="assets/images/favicon_io/site.webmanifest">
 </head>
 
+<script>
+  function startMotionVideos() {
+    document.querySelectorAll("#motion video").forEach(video => {
+      video.querySelectorAll("source[data-src]").forEach(source => {
+        source.src = source.dataset.src;
+      });
+
+      video.muted = true;
+      video.load();
+      video.play().catch(() => {});
+    });
+  }
+
+  if (document.readyState === "complete") {
+    startMotionVideos();
+  } else {
+    window.addEventListener("load", startMotionVideos, { once: true });
+  }
+</script>
+
 <body>
   <!-- NAVIGATION -->
   <header class="header">
@@ -157,24 +177,24 @@
       <h2>Motion Graphics</h2>
       <div class="motion-grid">
         <div class="motion-card motion-video">
-          <video autoplay loop muted playsinline preload="none">
+          <video loop muted playsinline preload="none">
             <source src="assets/motions/puppet.mp4" type="video/mp4">
           </video>
         </div>
-      
+
         <div class="motion-card motion-video">
-          <video autoplay loop muted playsinline preload="none">
+          <video loop muted playsinline preload="none">
             <source src="assets/motions/pacman-animation.mp4" type="video/mp4">
           </video>
         </div>
         <div class="motion-card motion-video">
-          <video autoplay loop muted playsinline preload="none">
+          <video loop muted playsinline preload="none">
             <source src="assets/motions/car-animation.mp4" type="video/mp4">
           </video>
         </div>
       
         <div class="motion-card motion-video">
-          <video autoplay loop muted playsinline preload="none">
+          <video loop muted playsinline preload="none">
             <source src="assets/motions/rupee-animation.mp4" type="video/mp4">
           </video>
         </div>
