@@ -225,6 +225,7 @@ p {
   border-radius: 10px;
   font-size: 22px;
   font-weight: 600;
+  letter-spacing: 1px;
   line-height: 1;
   transition: background .22s, color .22s, border-color .22s;
 }
@@ -441,7 +442,7 @@ a:focus-visible, button:focus-visible {
     --heading-size: 48px;
     --paragraph-size: 18px;
     --label-size: 11px;
-    --navigation-size: 17px;
+    --navigation-size: 26px;
     --logo-height: 36px;
   }
 
@@ -489,7 +490,7 @@ a:focus-visible, button:focus-visible {
   }
 
   .menu > a { display: inline-block; padding-block: 8px; }
-  .menu > .button { padding: 12px 20px; }
+  .menu > .button { padding: 10px 20px; }
   .short-grid { grid-template-columns: repeat(2, 1fr); }
   .two-columns { gap: 32px; }
   .tools {
@@ -508,7 +509,7 @@ a:focus-visible, button:focus-visible {
     --heading-size: 48px;
     --paragraph-size: 14px;
     --label-size: 10px;
-    --navigation-size: 17px;
+    --navigation-size: 24px;
     --logo-height: 48px;
   }
 
@@ -520,7 +521,8 @@ a:focus-visible, button:focus-visible {
     gap: 20px;
   }
   .buttons .button{
-    padding: 10px 15px;
+    padding: 10px 20px;
+    font-size: 18px;
   }
   .container{
         width: auto;
