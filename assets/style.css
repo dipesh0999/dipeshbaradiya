@@ -623,3 +623,80 @@ a:focus-visible, button:focus-visible {
     max-width: calc(100% - 24px);
   }
 }
+
+
+
+.long-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.long-grid > * {
+  grid-column: span 2;
+  min-width: 0;
+}
+
+/* Center the last video when the total is odd */
+.long-grid > :nth-child(odd):last-child {
+  grid-column: 2 / span 2;
+}
+
+@media (max-width: 600px) {
+  .long-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .long-grid > :nth-child(n) {
+    grid-column: auto;
+  }
+}
+
+
+.short-grid {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.short-grid > * {
+  grid-column: span 2;
+  min-width: 0;
+}
+
+/* Last row has 1 video */
+.short-grid > :nth-child(4n + 1):last-child {
+  grid-column: 4 / span 2;
+}
+
+/* Last row has 2 videos */
+.short-grid > :nth-child(4n + 1):nth-last-child(2) {
+  grid-column: 2 / span 2;
+}
+
+/* Last row has 3 videos */
+.short-grid > :nth-child(4n + 1):nth-last-child(3) {
+  grid-column: 2 / span 2;
+}
+
+@media (max-width: 1024px) {
+  .short-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+
+.short-grid > * {
+  grid-column: auto 1;
+  min-width: 0;
+}
+
+  /* Reset desktop positioning */
+  .short-grid > :nth-child(n) {
+    grid-column: auto / span 2 !important;
+  }
+
+  /* Center the final video when the total is odd */
+  .short-grid > :nth-child(odd):last-child {
+    grid-column: 2 / span 2 !important;
+  }
+}
