@@ -220,13 +220,14 @@ p {
 
 .button {
   display: inline-block;
-  padding: 8px 20px;
+  padding: 10px 20px;
   border: 1px solid var(--accent);
   border-radius: 10px;
-  font-size: 22px;
+  font-size: 16px;
   font-weight: 600;
-  letter-spacing: 1px;
+  letter-spacing: .5px;
   line-height: 1;
+  text-transform: uppercase;
   transition: background .22s, color .22s, border-color .22s;
 }
 
@@ -522,7 +523,7 @@ a:focus-visible, button:focus-visible {
   }
   .buttons .button{
     padding: 10px 20px;
-    font-size: 18px;
+    font-size: 14px;
   }
   .container{
         width: auto;
